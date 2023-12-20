@@ -142,6 +142,7 @@ function dymRakiety() {
   const element = document.createElement('img')
   element.classList.add('element')
   element.src = 'img/dym.svg'
+  element.setAttribute('alt', '')
 
   let losowa = ((Math.random() * 3)  + 1).toFixed(1)
   element.style.width = `${losowa}%`
