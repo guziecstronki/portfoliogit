@@ -1,0 +1,7 @@
+duza rakieta pomaranczowa jako tlo ktora zamiast ognia wypuszcza takie jakby slimy(gluty pomaranczowe)
+
+wszedzie dac vh i vw wiewport high
+
+zrobic animacje dymu
+
+zrobic cos z animacjami pojawiania sie i w tedy ekran nie bedzie sie poszerzal

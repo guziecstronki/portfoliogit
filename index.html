@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div id="widocznosc">
+    </div>
+    <div class="baner"> <img src="img/baner.svg" alt="baner"></div>
+        <nav>
+            <div class="nawigacja">
+                <ul>
+                    <li>
+                        <a href="#umiejetnosci-tytul">Umiejętności</a>
+                    </li>
+                    <li>
+                        <a href="#osiagniecia-tytul">Osiągnięcia</a>
+                    </li>
+                    <li>
+                        <a href="#projekty-tytul">Projekty</a>
+                    </li>
+                    <li>
+                        <a href="#">Kontakt</a>
+                    </li>
+                </ul>
+                
+                <div id="menuToggle">
+
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <a href="#umiejetnosci-tytul"><li>Umiejętności</li></a>
+                        <a href="#osiagniecia-tytul"><li>Osiągnięcia</li></a>
+                        <a href="#projekty-tytul"><li>Projekty</li></a>
+                        <a href="#"><li>Kontakt</li></a>
+                    </ul>
+                  </div>
+            </div>
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+                <a href="#">Home</a>
+            </div>
+        </nav>
+    <header>
+        <div class="header-lewo">
+            <img src="img/profilowe.png" alt="Moje zdjęcie" class="zdjecie-profilowe" id="profilowe">
+        </div>
+        <div class="header-prawo">
+            <h1>Witaj w moim portfolio!</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum eligendi natus vero nesciunt vel quae id, hic voluptate perspiciatis ex? Pokażę Ci swoje dotychczasowe osiągnięcia, umiejętności oraz projekty</p>
+        </div>
+    </header>
+    <div id="dym">
+    </div>
+    <div id="rakieta">
+        <img src="img/rakietaPrawo.svg" alt="rakieta">
+    </div>
+    
+        <h2 class="tytul" id="umiejetnosci-tytul">Umiejętności</h2>
+
+        <section id="umiejetnosci" name="umiejetnosci">
+            <div class="opis" data-aos="fade-right">
+                <div class="jezyk doLewej">
+                    <div class="progress" id="html">
+                        <img src="img/html.png" alt="html">
+                    </div>
+                    <p id="html-wartosc">0%</p>
+                </div>
+                <div class="text">
+                    <h2 class="tytul-umiejetnosci" id="html-tytul">HTML</h2>
+                    <p>Języka html ucze sie od 2022 roku w szkole jak i w domu. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rerum ad repellendus veritatis pariatur nam dicta eos praesentium voluptates nisi, saepe sapiente ab reprehenderit expedita facilis distinctio! Ullam, dicta quod!</p>
+                </div>
+            </div>
+
+            <div class="opis" data-aos="fade-left">
+                <div class="text">
+                    <h2 class="tytul-umiejetnosci" id="css-tytul">CSS</h2>
+                    <p class="prawo">Języka css ucze sie również od 2022 roku w szkole jak i w domu. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita error magni non eius perspiciatis, accusantium iusto ad aut temporibus corporis minus, exercitationem nam, distinctio repellendus deserunt doloremque? Eius, odio reprehenderit.</p>
+                </div>
+                <div class="jezyk doPrawej">
+                    <div class="progress" id="css">
+                        <img src="img/css.png" alt="css">
+                    </div>
+                    <p id="css-wartosc">0%</p>
+                </div>
+            </div>
+
+            <div class="opis" data-aos="fade-right">
+                <div class="jezyk doLewej">
+                    <div class="progress" id="js">
+                        <img src="img/js.png" alt="javaScript">
+                    </div>
+                    <p id="js-wartosc">0%</p>
+                </div>
+                <div class="text">
+                    <h2 class="tytul-umiejetnosci" id="js-tytul">JavaScript</h2>
+                    <p>Języka javaScript ucze sie od 2023 roku w szkole jak i w domu. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos molestiae odit fugiat ducimus veniam dolorum quasi nam culpa commodi, atque tempora excepturi nesciunt aut officia iste recusandae dignissimos. Voluptatum, minima.</p>
+                </div>
+            </div>
+
+            <div class="opis" data-aos="fade-left">
+                <div class="text">
+                    <h2 class="tytul-umiejetnosci" id="python-tytul">Python</h2>
+                    <p class="prawo">Języka Python ucze sie od 2022 roku w szkole. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos modi magnam eos, consequatur esse fugiat unde blanditiis saepe tempora ducimus voluptatum, facilis nam minus. Dolores magni odit explicabo earum suscipit!</p>
+                </div>
+                <div class="jezyk doPrawej">
+                    <div class="progress" id="python">
+                        <img src="img/python.png" alt="python">
+                    </div>
+                    <p id="python-wartosc">0%</p>
+                </div>
+            </div>
+
+            <div class="opis" data-aos="fade-right">
+                <div class="jezyk doLewej">
+                    <div class="progress" id="c">
+                        <img src="img/c.png" alt="c#">
+                    </div>
+                    <p id="c-wartosc">0%</p>
+                </div>
+                <div class="text">
+                    <h2 class="tytul-umiejetnosci" id="c-tytul">C#</h2>
+                    <p>Języka C# ucze sie od 2023 roku w szkole. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolores, nemo officiis in tempora deleniti officia minus, ipsam dolorum corrupti possimus itaque alias, fugit aut cum quam soluta eveniet mollitia?</p>
+                </div>
+            </div>
+
+        </section>
+
+        <h2 class="tytul" id="osiagniecia-tytul">Osiągnięcia</h2>
+
+        <section id="osiagniecia" name="osiagniecia">
+
+            <div class="odznaka" data-aos="fade-up-right">
+                <img src="img/javascript-essentials-1.png" alt="javaScript essentials 1">
+            </div>
+
+            <div class="odznaka" data-aos="fade-up-left">
+                <img src="img/introduction-to-cybersecurity.png" alt="introduction to cybersecurity">
+            </div>
+
+        </section>
+
+        <h2 class="tytul" id="projekty-tytul">Projekty</h2>
+
+        <section id="projekty" name="projekty">
+            <div data-aos="fade-right">
+                <div class="projekt">
+                    <img src="img/kwadracik-miniaturka.png" alt="projekt1">
+                    <p>"Kwadracik" To gra którą stworzyłem jako pierwszą, polega na klikaniu w kwadracik przez określony czas co klikniecie lub pol sekundy zmienia polozenie</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <div class="projekt">
+                    <img src="img/thepoop-miniaturka.png" alt="projekt2">
+                    <p>"The poop" jest to druga stworzona przeze mnie gra. Chodzi w niej o to że 2 graczy na jednym komputerze rywalizuje ze sobą</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <div class="projekt">
+                    <img src="img/zarowka.jpg" alt="miejsce na pomysl">
+                    <p>Miejsce pozostawione na kolejny projekt</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="tytul">Kontakt</h2>
+
+        <section id="kontakt" name="kontakt">
+            
+        </section>
+</body>
+</html>

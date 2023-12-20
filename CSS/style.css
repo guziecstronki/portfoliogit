@@ -1,0 +1,551 @@
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+    /* overflow-x: hidden; */
+}
+#rakieta{
+    width: 10%;
+    position: fixed;
+    z-index: -2;
+    transition: 1s ease-out;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+#rakieta img{
+    width: 100%;
+}
+#dym{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+.element{
+    position: absolute;
+    z-index: -3;
+    transition: 0.2s ease-out;
+    pointer-events: none;
+}
+.animacjaLewo{
+    transition: all 2s ease-out;
+    transform: translate(-25%, -50%);
+}
+.animacjaPrawo{
+    transition: all 2s ease-out;
+    transform: translate(25%, -50%);
+}
+#widocznosc{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(255,255,255,0) 10%);
+    pointer-events: none;
+}
+.baner{
+    position: absolute;
+    z-index: -1; 
+    height: 100%;
+    width: 100%;
+}
+.baner img{
+    position: absolute;
+    width: 98vw;
+    top: 0;
+    left: 0;
+}
+nav{
+    z-index: 2;
+    padding: 0.7vw 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+}
+#menuToggle{
+    display: none;
+}
+.scrollowany{
+    background-color: #FFFFFFAA;
+    padding-top: 0.2vw; 
+    backdrop-filter:blur(0.6vw);
+    box-shadow: 0vw 0.7vw 1vw -0.5vw rgba(0, 0, 0, 1);
+}
+.scrollowany #menuToggle span{
+    background-color: #ed6134;
+}
+.scrollowany a{
+    color: rgb(112, 121, 255);
+}
+.nawigacja{
+    width: 40%;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style-type: none;
+    margin-top: 0.5vw;
+    transition: ease-in-out .2s;
+    font-size: 1.5vw;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out .2s;
+}
+nav ul li:hover{
+    transform: scale(1.1);
+}
+nav ul li a:hover{
+    color: #284BED !important; 
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+    width: 10%;
+}
+.logo img{
+    padding: 0;
+    width: 2vw;
+}
+.logo a{
+    padding: 0;
+    text-decoration: none;
+    font-size: 1vw;
+}
+header{
+    padding: 5vw;
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+header .zdjecie-profilowe{
+    margin-top: 1.5vw;
+    width: 15vw;
+    height: 15vw;
+    border: 0.2vw solid black;
+}
+header .header-prawo{
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+header h1{
+    color: #102eb6;
+    font-size: 2vw;
+    margin-bottom: 0;
+}
+header p{
+    margin: 0;
+    color: white;
+    font-size: 1.5vw;
+}
+.tytul{
+    margin: 10% 0;
+    text-align: center;
+    color: #102eb6;
+    font-size: 2vw;
+    font-weight: 900;
+}
+#umiejetnosci{
+    width: 70%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5%;
+    backdrop-filter: blur(0.5vw);
+    padding: 5% 0;
+}
+.tytul-umiejetnosci{
+    text-shadow: 0.05vw 0.1vw 0.1vw rgb(0, 0, 0);
+}
+.opis{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.text p{
+    font-size: 1.5vw;
+    margin: 5%;
+    margin-top: 0;
+    height: 80%;
+}
+.text h2{
+    font-size: 1.5vw;
+
+}
+.prawo, #python-tytul, #css-tytul{
+    text-align: right;
+}
+#html-tytul{
+    color: #FF5733;
+}
+#css-tytul{
+    color: #2A65F0;
+}
+#js-tytul{
+    color: #F9DF34;
+}
+#python-tytul{
+    color: #4989BC;
+}
+#c-tytul{
+    color: #6017c6;    
+}
+.jezyk p{
+    font-size: 1.5vw;
+    color: #35508B;
+    text-align: center;
+}
+.progress{
+    margin: 0.5vw;
+    position: relative;
+    height: 12vw;
+    width: 12vw;
+    border-radius: 50%;
+    background: conic-gradient(white 0deg, #EEE 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress::before{
+    content: "";
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    background-color: white;
+}
+.progress img{
+    width: 6.5vw;
+    position: relative;
+}
+#osiagniecia{
+    padding: 2vw 0;
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(76, 81, 237, 0.1);
+}
+.odznaka{
+    padding: 1vw;
+}
+.odznaka img{
+    width: 10vw;
+}
+#projekty{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projekt{
+    margin: 1vw;
+    width: 15vw;
+    height: 25vw;
+    border-radius: 5%;
+    background-color: rgba(208, 208, 208, 0.2);
+    backdrop-filter:blur(1vw);
+    box-shadow: 0.5vw 0.8vw 0.5vw -0.5vw rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transition: ease-in-out 0.2s;
+}
+.projekt img{
+    margin-top: 1vw;
+    width: 70%;
+    border: 0.2vw dashed #4c51ed;
+    border-radius: 10%;
+    box-shadow: 0vw 0vw 0.7vw -0.2vw rgba(66, 68, 90, 1);
+}
+.projekt p{
+    display: block;
+    padding: 0 15%;
+    font-size: 1vw;
+}
+.projekt:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 767px){
+    nav{
+        padding: 2vw 0;
+    }
+    #menuToggle
+    {
+    display: block;
+    position: relative;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+    }
+
+    #menuToggle a
+    {
+    text-decoration: none;
+    color: rgb(112, 121, 255);
+    
+    transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover
+    {
+    color: #284BED;
+    }
+
+
+    #menuToggle input
+    {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+    }
+
+    /*
+    * Just a quick hamburger
+    */
+    #menuToggle span
+    {
+    top: 6px;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: white;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child
+    {
+    transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2)
+    {
+    transform-origin: 0% 100%;
+    }
+
+    /* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    #menuToggle input:checked ~ span
+    {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    #menuToggle input:checked ~ span:nth-last-child(3)
+    {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    #menuToggle input:checked ~ span:nth-last-child(2)
+    {
+    transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #menu
+    {
+    display: block;
+    position: absolute;
+    width: 50vw;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: white;
+    box-shadow: 0vw 0vw 5vw 1vw rgba(0, 0, 0, 1);
+    /* backdrop-filter: blur(10vw); */
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #menu li
+    {
+    padding: 2vw 0;
+    font-size: 4vw;
+    }
+    /*
+    * And let's slide it in from the left
+    */
+    #menuToggle input:checked ~ ul{
+        transform: none;
+    }
+    nav ul li:hover{
+        transform: scale(1);
+    }
+    nav ul li a:hover{
+        color: #284BED !important; 
+    }
+    .nawigacja ul{
+        display: none;
+    }
+    .logo{
+        width: 20vw;
+    }
+    .logo img{
+        width: 10vw;
+    }
+    .logo a{
+        font-size: 3vw;
+    }
+    header{
+        width: 100%;
+    }
+    header .header-prawo h1{
+        font-size: 5vw;
+    }
+    header .header-prawo p{
+        margin-top: 2vw;
+        font-size: 3vw;
+        width: 70%;
+    }
+    header .zdjecie-profilowe{
+        margin-top: 2vw;
+        width: 25vw;
+        height: 25vw;
+        border: 0.4vw solid black;
+    }
+    .baner img{
+        position: absolute;
+        width: 200vw;
+        top: 0;
+        left: -104vw;
+    }
+    .tytul{
+        font-size: 5vw;
+    }
+    #umiejetnosci-tytul{
+        margin-top: 20vw;
+    }
+    #umiejetnosci{
+        width: 100%;
+    }
+    .progress{
+        height: 22vw;
+        width: 22vw;
+    }
+    .progress::before{
+        height: 20vw;
+        width: 20vw;
+    }
+    .opis{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    .jezyk{
+        order: -1;
+    }
+    .doPrawej{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .doPrawej p{
+        order: -1;
+    }
+    .doLewej{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .jezyk p{
+        margin: 0;
+        font-size: 4vw;
+    }
+    .progress img{
+        width: 13vw;
+        height: 13vw;
+    }
+    .text{
+        width: 100%;
+    }
+    .text h2{
+        font-size: 3vw;
+        margin: 1vw 5vw;
+        text-shadow: 0.2vw 0.2vw 0.5vw rgba(66, 68, 90, 1);
+    }
+    .text p{
+        font-size: 3vw;
+    }
+    .odznaka img{
+        width: 30vw;
+    }
+    .projekt{
+        width: 60vw;
+        height: auto;
+        margin: 5% auto;
+        padding: 10% 0;
+    }
+    .projekt img{
+        width: 60%;
+        border: 0.5vw dashed #4c51ed;
+    }
+    .projekt p {
+        font-size: 4vw;
+    }
+}
