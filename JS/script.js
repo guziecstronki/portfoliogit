@@ -1,5 +1,7 @@
 AOS.init();
 
+console.log('siemanko')
+
 const profilowe = document.getElementById('profilowe');
 
 profilowe.addEventListener('mouseover', () => {
