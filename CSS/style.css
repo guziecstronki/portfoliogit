@@ -262,6 +262,10 @@ header p{
     justify-content: center;
     flex-wrap: wrap;
 }
+.projekt-link{
+    text-decoration: none;
+    color: black;
+}
 .projekt{
     margin: 1vw;
     width: 15vw;
