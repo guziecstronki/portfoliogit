@@ -78,17 +78,17 @@ function uruchomAnimacje() {
 
   if (czyElementWidoczny(jsElement) && !jsAnimacja) {
     jsAnimacja = true;
-    animacja('js', 'js-wartosc', 70, 20);
+    animacja('js', 'js-wartosc', 60, 20);
   }
 
   if (czyElementWidoczny(pythonElement) && !pythonAnimacja) {
     pythonAnimacja = true;
-    animacja('python', 'python-wartosc', 60, 20);
+    animacja('python', 'python-wartosc', 20, 20);
   }
 
   if (czyElementWidoczny(cElement) && !cAnimacja) {
     cAnimacja = true;
-    animacja('c', 'c-wartosc', 50, 20);
+    animacja('c', 'c-wartosc', 30, 20);
   }
 }
 
@@ -145,8 +145,8 @@ function dymRakiety() {
   element.setAttribute('alt', 'dymek')
 
   let losowa = ((Math.random() * 3)  + 1).toFixed(1)
-  element.style.width = `${losowa}%`
-  element.style.height = `${losowa}%`
+  element.style.width = `${losowa}vw`
+  element.style.height = `${losowa}vw`
 
   if(kierunekX == 1){
     element.style.left = `${aktualneLeftProcenty}%`
@@ -222,14 +222,45 @@ window.addEventListener('DOMContentLoaded', ()=>{
 });
 
 window.addEventListener('resize', ()=>{
+  usunElementyZPozaBody()
   if (window.innerWidth <= 767) {
     usunAtrybutZElementow()
   }
 })
 
 function usunAtrybutZElementow() {
-  let elementy = document.querySelectorAll('[data-aos]');
+  const elementy = document.querySelectorAll('[data-aos]');
   elementy.forEach(function(element) {
     element.removeAttribute('data-aos');
   });
 }
+
+const info = document.querySelector('.info')
+const informacje = document.querySelector('.informacje')
+info.addEventListener('mouseover', () => {
+  informacje.classList.add('visible')
+})
+info.addEventListener('touchstart', () => {
+  informacje.classList.add('visible')
+})
+info.addEventListener('mouseout', () => {
+  informacje.classList.remove('visible')
+})
+info.addEventListener('touchend', () => {
+  informacje.classList.remove('visible')
+})
+// function usunElementyZPozaBody(){
+//   const body = document.body
+//   const rect = body.getBoundingClientRect();
+//   const wysokosc = rect.height;
+//   console.log(wysokosc);
+//   const dym = document.querySelectorAll('#dym .elemet')
+//   console.log(dym);
+//   const values = []
+//   dym.forEach(dymek => {
+//     const element = dymek
+//     const computedStyle = window.getComputedStyle(element);
+//     const topValue = computedStyle.getPropertyValue('top');
+//     console.log(topValue);
+//   })
+// }

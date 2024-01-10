@@ -162,6 +162,28 @@ header p{
     color: white;
     font-size: 1.5vw;
 }
+.info img{
+    width: 1vw;
+    height: 1vw;
+}
+.informacje{
+    width: 20vw;
+    height: 25vw;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 40%;
+    color: gray;
+    background-color: white;
+    padding: 2vw;
+    border-radius: 2vw;
+    font-size: 2vw;
+    border: 5px solid #4c51ed;
+    display: none;
+}
+.visible{
+    display: block;
+}
 .tytul{
     margin: 10% 0;
     text-align: center;
@@ -293,6 +315,23 @@ header p{
     font-size: 1vw;
 }
 .projekt:hover{
+    transform: scale(1.1);
+}
+.media{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10%;
+    margin-top: -10%;
+    width: 50%;
+}
+.media img{
+    width: 5vw;
+    box-shadow: 5px 5px 8px 5px rgba(66, 68, 90, 1);
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s;
+    border-radius: 60%;
+}
+.media img:hover{
     transform: scale(1.1);
 }
 
@@ -481,6 +520,13 @@ header p{
         top: 0;
         left: -104vw;
     }
+    .info img{
+        width: 4vw;
+        height: 4vw;
+    }
+    .informacje{
+        top: 55%;
+    }
     .tytul{
         font-size: 5vw;
     }
@@ -531,7 +577,7 @@ header p{
     .text h2{
         font-size: 3vw;
         margin: 1vw 5vw;
-        text-shadow: 0.2vw 0.2vw 0.5vw rgba(66, 68, 90, 1);
+        text-shadow: 0.1vw 0.2vw 0.2vw rgba(66, 68, 90, 1);
     }
     .text p{
         font-size: 3vw;
@@ -551,5 +597,11 @@ header p{
     }
     .projekt p {
         font-size: 4vw;
+    }
+    .media{
+        width: 75%;
+    }
+    .media img{
+        width: 10vw;
     }
 }
