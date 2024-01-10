@@ -171,8 +171,7 @@ header p{
     height: 25vw;
     position: absolute;
     z-index: 10;
-    left: 50%;
-    top: 40%;
+    left: 45%;
     color: gray;
     background-color: white;
     padding: 2vw;
@@ -180,6 +179,7 @@ header p{
     font-size: 2vw;
     border: 5px solid #4c51ed;
     display: none;
+    pointer-events: none;
 }
 .visible{
     display: block;
