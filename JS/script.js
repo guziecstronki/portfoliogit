@@ -51,8 +51,6 @@ let wordpressAnimacja = false;
 let htmlAnimacja = false;
 let cssAnimacja = false;
 let jsAnimacja = false;
-let pythonAnimacja = false;
-let cAnimacja = false;
 
 function czyElementWidoczny(element) {
   const rect = element.getBoundingClientRect();
@@ -65,12 +63,10 @@ function uruchomAnimacje() {
   const htmlElement = document.getElementById('html');
   const cssElement = document.getElementById('css');
   const jsElement = document.getElementById('js');
-  const pythonElement = document.getElementById('python');
-  const cElement = document.getElementById('c');
 
   if (czyElementWidoczny(wordpressElement) && !wordpressAnimacja) {
     wordpressAnimacja = true;
-    animacja('wordpress', 'wordpress-wartosc', 90, 20);
+    animacja('wordpress', 'wordpress-wartosc', 85, 20);
   }
 
   if (czyElementWidoczny(htmlElement) && !htmlAnimacja) {
@@ -85,17 +81,7 @@ function uruchomAnimacje() {
 
   if (czyElementWidoczny(jsElement) && !jsAnimacja) {
     jsAnimacja = true;
-    animacja('js', 'js-wartosc', 60, 20);
-  }
-
-  if (czyElementWidoczny(pythonElement) && !pythonAnimacja) {
-    pythonAnimacja = true;
-    animacja('python', 'python-wartosc', 20, 20);
-  }
-
-  if (czyElementWidoczny(cElement) && !cAnimacja) {
-    cAnimacja = true;
-    animacja('c', 'c-wartosc', 30, 20);
+    animacja('js', 'js-wartosc', 65, 20);
   }
 }
 
