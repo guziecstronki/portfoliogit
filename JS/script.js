@@ -47,6 +47,7 @@ function animacja(idJezyka, idProcenty, wartoscKoncowa, predkosc) {
     }, predkosc);
 }
 
+let wordpressAnimacja = false;
 let htmlAnimacja = false;
 let cssAnimacja = false;
 let jsAnimacja = false;
@@ -60,11 +61,17 @@ function czyElementWidoczny(element) {
 
 
 function uruchomAnimacje() {
+  const wordpressElement = document.getElementById('wordpress');
   const htmlElement = document.getElementById('html');
   const cssElement = document.getElementById('css');
   const jsElement = document.getElementById('js');
   const pythonElement = document.getElementById('python');
   const cElement = document.getElementById('c');
+
+  if (czyElementWidoczny(wordpressElement) && !wordpressAnimacja) {
+    wordpressAnimacja = true;
+    animacja('wordpress', 'wordpress-wartosc', 90, 20);
+  }
 
   if (czyElementWidoczny(htmlElement) && !htmlAnimacja) {
     htmlAnimacja = true;
